@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@types/three": "^0.127.1",
     "cache-loader": "^4.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "html-webpack-plugin": "^5.3.1",
@@ -21,5 +22,8 @@
   "scripts": {
     "start": "webpack serve --env development",
     "build": "webpack"
+  },
+  "dependencies": {
+    "three": "^0.127.0"
   }
 }
