@@ -9,9 +9,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // Directories
 const appSrc = path.join(__dirname, 'src');
-const appPublic = path.join(__dirname, 'public');
 const appBuild = path.join(__dirname, 'build');
-const appHtml = path.join(appPublic, 'index.html');
+const appHtml = path.join(appSrc, 'index.html');
 const appIndex = path.join(appSrc, 'index.ts');
 
 module.exports = (webpackEnv) => {
@@ -63,7 +62,7 @@ module.exports = (webpackEnv) => {
     },
     devServer: {
       port: 3000,
-      contentBase: appPublic,
+      contentBase: appSrc,
       open: true,
       overlay: true,
       stats: 'errors-only',
